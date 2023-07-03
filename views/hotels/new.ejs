@@ -1,7 +1,7 @@
 <%- include('../partials/header.ejs') %>
 
 <div class="bg margin mt-5">
-    <form method="post" action="/hotels/new">
+    <form method="post" enctype="multipart/form-data" action="/hotels/new">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Hotel Name</label>
             <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -19,9 +19,8 @@
             <input name="description" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Image</label>
-            <input name="image" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+            <label for="formFileMultiple" class="form-label">Select Images</label>
+            <input name="image" class="form-control" type="file" id="formFileMultiple" multiple></div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

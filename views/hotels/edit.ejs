@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="bg margin mt-5">
+    <form method="post" action="/hotels/<%= HotelData._id %>/edit?_method=patch">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Hotel Name</label>
+            <input value="<%= HotelData.name %>" name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">location</label>
+            <input value="<%= HotelData.location %>" name="location" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Price</label>
+            <input value="<%= HotelData.price %>" name="price" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <input value="<%= HotelData.description %>" name="description" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Image</label>
+            <input value="<%= HotelData.image %>" name="image" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+<%- include('../partials/footer.ejs') %>
