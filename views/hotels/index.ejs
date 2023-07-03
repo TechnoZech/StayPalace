@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+<div class="margin d-flex gap-5">
+    <% for (let hotel of HotelsData){ %>
+        <div class="card" style="width: 18rem">
+            <img src="<%= hotel.image %>" class="card-img-top" alt="hotel" />
+            <div class="card-body">
+                <h5 class="card-title"><%= hotel.name %></h5>
+                <p class="card-text">
+                    <%= hotel.price %>
+                </p>
+                <p class="card-text">
+                    <%= hotel.location %>
+                </p>
+                <p class="card-text">
+                    <%= hotel.description %>
+                </p>
+                <a href="/hotels/<%= hotel._id %>/view" class="btn btn-primary">View Hotel</a>
+            </div>
+        </div>
+    <% } %>
+</div>
+<%- include('../partials/footer.ejs') %>

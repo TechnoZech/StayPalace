@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="card mb-3" style="max-width: 100vw; margin: 0 10%;">
+    <div class="row g-0">
+      <div class="col-lg-6 col-md-4">
+        <img src="<%= HotelData.image %>" class="img-fluid rounded-start" alt="Hotel">
+      </div>
+      <div class="col-lg-6 col-md-8">
+        <div class="card-body">
+            <h5 class="card-title"><%= HotelData.name %></h5>
+			<p class="card-text"><%= HotelData.price %></p>
+			<p class="card-text"><%= HotelData.location %></p>
+			<p class="card-text"><%= HotelData.description %></p>
+			<a href="/hotels/<%= HotelData._id %>/view" class="btn btn-success"
+				>Book Now!</a
+			>
+        </div>
+      </div>
+    </div>
+  </div>
+<%- include('../partials/footer.ejs') %>
